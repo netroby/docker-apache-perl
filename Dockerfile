@@ -33,6 +33,5 @@ COPY localhost.conf /etc/apache2/sites-enabled/localhost.conf
 RUN rm  /etc/apache2/conf-enabled/serve-cgi-bin.conf
 RUN ln -sf /proc/self/fd/1 /var/log/apache2/access.log && \
     ln -sf /proc/self/fd/1 /var/log/apache2/error.log    
-VOLUME ["/var/www/html"]
 
 EXPOSE 80
